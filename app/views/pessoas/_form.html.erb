@@ -1,0 +1,14 @@
+<% form_for(@pessoa) do |f| %>
+		  <div class="field">
+			<%= f.label :NOME %><br/>
+		    <%= f.text_field :nome, :mask => "99/99/9999" %><br />
+		  </div>
+		  <div class="field">
+			<%= f.label :TIPO %><br/>
+		    <%= f.select(:tipo, options_for_select([['Funcionario', 'funcionario'], ['Candidato', 'candidato']]))  %><br />
+		  </div>
+		  <div class="actions">
+		    <%= f.submit %>
+		  </div>
+<% end %>
+

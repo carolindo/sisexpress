@@ -1,0 +1,43 @@
+!!! Strict
+%html
+    %head
+        %title
+            SISEXPRESS - Sistema de Gerenciamento de Entregas
+        =stylesheet_link_tag 'application'
+        =javascript_include_tag 'application'
+        =javascript_init_menu        
+        =csrf_meta_tag
+    %body
+        #top_bar
+            .system_client_name
+                %span.system_title SiSExpress -
+                SUPERMERCADOS ZONA SUL
+            .logged_user
+                =image_tag "user.png"
+                Olá Usuário
+            .logoff
+                =image_tag "disconnect.png", :class=> "img_disconnect"
+                SAIR
+            .system_date
+                =image_tag "clock.png"
+                =long_date
+        #menu_bar
+            .container_management
+                .menu_management
+                    =image_tag "boss.png"
+                .link_menu_management
+                    %a{:href => '#', :class => "menuanchorclass submenu", :rel => "operacoes"} Gerencial
+            .container_delivery
+                .menu_delivery
+                    =image_tag "delivery.png"
+                .link_menu_delivery
+                    %a{:href => '#', :class => "menuanchorclass submenu", :rel => "logistica"} Logistica
+            .container_config
+                .menu_config
+                    =image_tag "configg.png"
+                .link_menu_config
+                    %a{:href => '#', :class => "menuanchorclass submenu", :rel => "config"} Configs
+          
+                
+          
+        =yield

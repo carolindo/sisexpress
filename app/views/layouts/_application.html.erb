@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SISEXPRESS - Sistema de Gerenciamento de Entregas</title>
+  <%= stylesheet_link_tag :all %>
+  <%= javascript_include_tag :defaults %>
+  <%= javascript_include_inputs %>
+  <%= csrf_meta_tag %>
+</head>
+<body>
+<div id="top_bar">
+	<div class="system_client_name">
+		<span class="system_title">SiSExpress</span>DSADADADA<%= %>
+	</div>
+	<div class="logged_user">
+		<%= image_tag "user.png" %> Olá USUARIO
+	</div>
+	<div class="logoff">
+		<%= image_tag "disconnect.png", :class => "img_disconnect" %> SAIR</img>
+	</div>
+	<div class="system_date">
+		<%= image_tag "clock.png" %><%= long_date %>
+	</div>
+</div>
+<div id="menu_bar">
+	<div class="container_management">
+		<div class="menu_management">
+			<%= image_tag "boss.png" %>
+		</div>
+		<div class="link_menu_management">
+			<%= link_to "Gerencial" %>
+		</div>
+	</div>
+	<div class="container_delivery">
+		<div class="menu_delivery">
+			<%= image_tag "delivery.png" %>
+		</div>
+		<div class="link_menu_management">
+			<%= link_to "Logistica" %>
+		</div>
+	</div>
+	<div class="container_config">
+		<div class="menu_config">
+			<%= image_tag "configg.png" %>
+		</div>
+		<div class="link_menu_config">
+			<%= link_to "Configs" %>
+		</div>
+	</div>
+</div>
+
+<%= yield %>
+
+</body>
+</html>

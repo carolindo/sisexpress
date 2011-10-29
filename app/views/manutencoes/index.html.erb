@@ -1,0 +1,21 @@
+<h1>Listing manutencoes</h1>
+
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @manutencoes.each do |manutencao| %>
+  <tr>
+    <td><%= link_to 'Show', manutencao %></td>
+    <td><%= link_to 'Edit', edit_manutencao_path(manutencao) %></td>
+    <td><%= link_to 'Destroy', manutencao, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Manutencao', new_manutencao_path %>

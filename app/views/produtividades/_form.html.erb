@@ -1,0 +1,17 @@
+<%= form_for(@produtividade) do |f| %>
+  <% if @produtividade.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@produtividade.errors.count, "error") %> prohibited this produtividade from being saved:</h2>
+
+      <ul>
+      <% @produtividade.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

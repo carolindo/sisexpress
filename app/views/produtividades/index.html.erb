@@ -1,0 +1,21 @@
+<h1>Listing produtividades</h1>
+
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @produtividades.each do |produtividade| %>
+  <tr>
+    <td><%= link_to 'Show', produtividade %></td>
+    <td><%= link_to 'Edit', edit_produtividade_path(produtividade) %></td>
+    <td><%= link_to 'Destroy', produtividade, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Produtividade', new_produtividade_path %>
