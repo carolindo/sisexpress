@@ -1,0 +1,15 @@
+%h1 Listagem de Clientes
+%table
+  %tr
+    %th
+    
+-@clientes.each do |cliente|
+  %tr
+    %td =link_to 'Visualizar', cliente
+    %td =link_to 'Editar', edit_cliente_path(cliente)
+    %td =link_to 'Deletar', cliente, :confirm => 'Voce deseja deletar este cliente?', :method => :delete
+
+.div_links
+  =link_to 'New Cliente', new_cliente_path
+    
+    

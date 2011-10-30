@@ -1,0 +1,40 @@
+=form_for(@cliente) do |f|
+  -if @cliente.errors.any?
+    .error_explanation
+      %h2 =pluralize(@cliente.errors.count, "error") prohibited this cliente from being saved:
+      %ul
+        -@cliente.errors.full_messages.each do |msg|
+          %li =msg
+          
+  .field
+    %fieldset
+      %legend Dados Gerais
+      
+      .div_label
+        =f.label :nome, "NOME"
+        .div_input
+          =f.text_field :nome, :size => 50
+          
+      .div_label
+        =f.label :rg, "RG"
+        .div_input
+          =f.text_field :rg, :size => 10
+          
+      .div_label
+        =f.label :exp_rg, "EXP. RG"
+        .div_input
+          =f.text_field :exp_rg, :size => 12
+          
+      .div_label
+        =f.label :cpf, "CPF"
+        .div_input
+          =f.text_field :cpf, :size => 11
+          
+      .div_label
+        =f.label :data_nasc, "DATA NASCIMENTO"
+        .div_input
+          =f.text_field :data_nasc, :size => 6
+      
+    
+  .actions
+    =f.submit
