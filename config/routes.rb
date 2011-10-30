@@ -6,6 +6,7 @@ Sisexpress::Application.routes.draw do
   #get "sisexpress/index"
   #get "sisexpress/pessoa"
   resources :pessoas
+  resources :clientes
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -13,7 +14,13 @@ Sisexpress::Application.routes.draw do
   # Sample of regular route:
      #match 'sisexpress' => 'pessoas#index'
      match 'sisexpress/index' => 'sisexpress#index'
-  
+     
+     match 'sisexpress/cliente/list' => 'clientes#index'
+     match 'sisexpress/cliente/new' => 'clientes#new', :as => :clientes
+     match 'sisexpress/cliente/edit/:id' => 'clientes#edit'
+     match 'sisexpress/cliente/show/:id' => 'clientes#show'
+     
+     
      match 'sisexpress/pessoa/list' => 'pessoas#index'
      match 'sisexpress/pessoa/new' => 'pessoas#new'
      match 'sisexpress/pessoa/edit/:id' => 'pessoas#edit'
